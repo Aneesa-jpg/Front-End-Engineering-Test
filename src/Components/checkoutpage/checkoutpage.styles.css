@@ -18,7 +18,10 @@
         width: 23%;
       }
       
-      
+      .left{
+        display: flex;
+        float: left;
+      }
     
   
     .total {

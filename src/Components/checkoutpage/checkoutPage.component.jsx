@@ -6,9 +6,13 @@ import {createStructuredSelector} from 'reselect';
 import './checkoutpage.styles.css'
 
 const CheckoutPage = ({cartItems,total,discount}) => {
+
+    const arrlength = cartItems.length;
+
     return (
 
         <div className='checkout-page'>
+        <span className='left'>Products : {arrlength}</span>
             <div className='checkout-header'>
                 <div className='header-block'>
                     <span>Product</span>
@@ -36,7 +40,7 @@ const CheckoutPage = ({cartItems,total,discount}) => {
                     <span>Discount : ${discount}</span>
                 </div>
                 <div className='total'>
-                    <span>Order Total : ${discount}</span>
+                    <span>Order Total : ${total - discount}</span>
                 </div>
                 
             
